@@ -1,0 +1,47 @@
+$color-primary: rgb(250, 245, 245);
+$color-black: black;
+$text-color: rgb(146, 143, 143);
+$color-secondary: rgb(231, 142, 58);
+$color-primary-dark2: rgb(24, 7, 24);
+
+$color-white: #fff;
+
+$color-grey-dark-1: #333;
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+$line: 1px solid var(--color-grey-light-2);
+
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 43.75em; // 700px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 72.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 60%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-grey-dark-1;
+}

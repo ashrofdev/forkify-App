@@ -1,0 +1,24 @@
+.body {
+  & .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    & .header {
+      grid-column: 1 / -1;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & .recipe-list {
+    }
+
+    & .recipe-details {
+      grid-column: 2 / 4;
+    }
+
+    & .shopping-list {
+    }
+  }
+}

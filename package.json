@@ -1,0 +1,14 @@
+{
+  "name": "forkify-app",
+  "version": "1.0.0",
+  "description": "a recipie application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ashrofDev",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
