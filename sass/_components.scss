@@ -1,0 +1,92 @@
+.body {
+  background-image: linear-gradient(
+    to right,
+    rgb(247, 215, 73),
+    $color-secondary
+  );
+
+  & .container {
+    background-color: #fff;
+    width: 85rem;
+    margin: auto auto;
+    margin-top: 8rem;
+    box-shadow: 1rem 1rem 4rem rgb(48, 47, 47);
+
+    & .header {
+      background-color: $color-primary;
+      border-bottom: 2px solid #fff;
+      height: 6rem;
+      padding-left: 2rem;
+
+      & .form {
+        & .input {
+          padding: 1rem;
+          border-radius: 10rem;
+          width: 25rem;
+          color: black;
+          outline: none;
+          transition: all 0.5s;
+
+          &::placeholder {
+            color: rgb(219, 215, 215);
+          }
+
+          &:focus {
+            width: 30rem;
+          }
+
+          &:hover {
+            border-color: $color-primary;
+          }
+        }
+
+        & .search {
+          padding: 1.1rem 2rem;
+          background-image: linear-gradient(
+            to right bottom,
+            rgb(247, 215, 73),
+            $color-secondary 50%
+          );
+          border-radius: 10rem;
+          margin-left: -5rem;
+          transition: all 0.5s;
+
+          &:hover {
+            transform: translateX(-0.5rem);
+            background-image: linear-gradient(
+              to right bottom,
+              $color-secondary,
+              $color-secondary
+            );
+          }
+        }
+      }
+
+      & .heart {
+        font-size: 2rem;
+        color: $color-secondary;
+        height: 100%;
+        padding: 2rem;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: rgb(238, 236, 236);
+        }
+      }
+    }
+
+    & .recipe-list {
+      background-color: #fff;
+      height: 30rem;
+    }
+
+    & .recipe-details {
+      background-color: $color-primary;
+    }
+
+    & .shopping-list {
+      background-color: #fff;
+      padding: 1rem;
+    }
+  }
+}
