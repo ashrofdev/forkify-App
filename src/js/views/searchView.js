@@ -19,14 +19,7 @@ export const highlightSelected = id => {
     document.querySelector(`.results__link[href*="${id}"]`).classList.add('results__link--active');
 };
 
-/*
-// 'Pasta with tomato and spinach'
-acc: 0 / acc + cur.length = 5 / newTitle = ['Pasta']
-acc: 5 / acc + cur.length = 9 / newTitle = ['Pasta', 'with']
-acc: 9 / acc + cur.length = 15 / newTitle = ['Pasta', 'with', 'tomato']
-acc: 15 / acc + cur.length = 18 / newTitle = ['Pasta', 'with', 'tomato']
-acc: 18 / acc + cur.length = 24 / newTitle = ['Pasta', 'with', 'tomato']
-*/
+
 export const limitRecipeTitle = (title, limit = 17) => {
     const newTitle = [];
     if (title.length > limit) {
@@ -60,7 +53,7 @@ const renderRecipe = recipe => {
     elements.searchResList.insertAdjacentHTML('beforeend', markup);
 };
 
-// type: 'prev' or 'next'
+
 const createButton = (page, type) => `
     <button class="btn-inline results__btn--${type}" data-goto=${type === 'prev' ? page - 1 : page + 1}>
         <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
@@ -75,16 +68,13 @@ const renderButtons = (page, numResults, resPerPage) => {
 
     let button;
     if (page === 1 && pages > 1) {
-        // Only button to go to next page
         button = createButton(page, 'next');
     } else if (page < pages) {
-        // Both buttons
         button = `
             ${createButton(page, 'prev')}
             ${createButton(page, 'next')}
         `;
     } else if (page === pages && pages > 1) {
-        // Only button to go to prev page
         button = createButton(page, 'prev');
     }
 
@@ -92,12 +82,9 @@ const renderButtons = (page, numResults, resPerPage) => {
 };
 
 export const renderResults = (recipes, page = 1, resPerPage = 10) => {
-    // render results of currente page
     const start = (page - 1) * resPerPage;
     const end = page * resPerPage;
 
     recipes.slice(start, end).forEach(renderRecipe);
-
-    // render pagination buttons
     renderButtons(page, recipes.length, resPerPage);
 };
