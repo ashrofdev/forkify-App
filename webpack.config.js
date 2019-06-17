@@ -1,5 +1,5 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: ['babel-polyfill', './src/js/index.js'],
@@ -11,7 +11,7 @@ module.exports = {
         contentBase: './dist'
     },
     plugins: [
-        new HTMLWebpackPlugin ({
+        new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html'
         })
@@ -27,5 +27,4 @@ module.exports = {
             }
         ]
     }
-
-}
+};
