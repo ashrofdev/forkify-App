@@ -42,7 +42,7 @@ export const renderRecipe = (recipe, isLiked) => {
             <h1 class="recipe__title">
                 <span>${recipe.title}</span>
             </h1>
-            <div class="rank">${recipe.rank}%</div>
+            <div class="rank">${recipe.rank - 2}%</div>
         </figure>
 
         <div class="recipe__details">
